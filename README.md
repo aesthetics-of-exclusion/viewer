@@ -1,11 +1,9 @@
-# viewer
+# StreetSwipe Facade Viewer
 
-lunr.js
+https://aesthetics-of-exclusion.github.io/viewer
 
-map view
+TODO:
 
-list view
-
-links naar knipper/checker
-
-ndjson stream
+- lunr.js
+- map view
+- links to check-screenshot and facade-cutter
