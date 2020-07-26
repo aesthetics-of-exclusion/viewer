@@ -1,24 +1,11 @@
 # viewer
 
-## Project setup
-```
-npm install
-```
+lunr.js
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+map view
 
-### Compiles and minifies for production
-```
-npm run build
-```
+list view
 
-### Lints and fixes files
-```
-npm run lint
-```
+links naar knipper/checker
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ndjson stream
