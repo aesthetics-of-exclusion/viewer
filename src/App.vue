@@ -1,22 +1,27 @@
 <template>
   <div id="app">
     <h1>StreetSwipe Facade Viewer</h1>
-    <h3>{{ pois.length }} POIs loaded, showing {{ firstIndex + 1 }} – {{ lastIndex }} </h3>
-    <paginate v-model="page" :page-count="Math.ceil(pois.length / pageSize)"
-      :page-range="3" :margin-pages="2"
-      :prev-text="'Prev'" :next-text="'Next'"
-      :container-class="'pagination'" :page-class="'page-item'">
-    </paginate>
-    <ol class="pois">
-      <li v-for="poi in pois.slice(firstIndex, lastIndex)" :key="poi.id">
-        <POI :poi="poi" />
-      </li>
-    </ol>
-    <paginate v-model="page" :page-count="Math.ceil(pois.length / pageSize)"
-      :page-range="3" :margin-pages="2"
-      :prev-text="'Prev'" :next-text="'Next'"
-      :container-class="'pagination'" :page-class="'page-item'">
-    </paginate>
+    <template v-if="pois.length === 0">
+      <h3>Loading…</h3>
+    </template>
+    <template v-else>
+      <h3>{{ pois.length }} POIs loaded, showing {{ firstIndex + 1 }} – {{ lastIndex }} </h3>
+      <paginate v-model="page" :page-count="Math.ceil(pois.length / pageSize)"
+        :page-range="3" :margin-pages="2"
+        :prev-text="'Prev'" :next-text="'Next'"
+        :container-class="'pagination'" :page-class="'page-item'">
+      </paginate>
+      <ol class="pois">
+        <li v-for="poi in pois.slice(firstIndex, lastIndex)" :key="poi.id">
+          <POI :poi="poi" />
+        </li>
+      </ol>
+      <paginate v-model="page" :page-count="Math.ceil(pois.length / pageSize)"
+        :page-range="3" :margin-pages="2"
+        :prev-text="'Prev'" :next-text="'Next'"
+        :container-class="'pagination'" :page-class="'page-item'">
+      </paginate>
+    </template>
   </div>
 </template>
 
